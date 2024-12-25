@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Ponderado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Ponderado</h1>
+        <div id="nombre-container">
+            <label for="nombre">Ingrese su nombre:</label>
+            <input type="text" id="nombre" placeholder="Tu nombre">
+            <button id="continuar">Continuar</button>
+        </div>
+        <div id="calculadora-container" style="display: none;">
+            <h2 id="bienvenida"></h2>
+            <div class="form">
+                <label for="nota">Nota (0-20):</label>
+                <input type="number" id="nota" min="0" max="20" placeholder="Nota">
+                <label for="peso">Peso (%):</label>
+                <input type="number" id="peso" min="0" max="100" placeholder="Peso">
+                <button id="agregar">Agregar Nota</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nota</th>
+                        <th>Peso (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-notas"></tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total Peso:</td>
+                        <td id="total-peso">0%</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="calcular">Calcular Promedio</button>
+            <p id="resultado"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
